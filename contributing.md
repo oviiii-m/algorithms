@@ -17,7 +17,7 @@ In your PR description, be sure to include screenshots that prove that your code
 NOTE: If you are making a PR for an open issue, first comment and ask the maintainers to assign it to you.
 
 Reporting bugs
-If you see a bug, you can report create an issue to report it. You may also fix the bug and raise a PR.
+If you see a bug, you can report create an issue to report it. You may also fix the bug and raise a PR
 
 How the PR gets merged?
 The PR will be reviewed by the maintainers of this repo and merged if deemed appropriate. You will receive a notification about the status of your PR.
