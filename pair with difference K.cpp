@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
-bool binary(int a[],int k,int low,int high)
+bool binarySearch(int a[],int k,int low,int high)
 {
     while(low<=high)
     {
@@ -16,7 +14,6 @@ bool binary(int a[],int k,int low,int high)
     return false;
 }
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
     int t;
     cin>>t;
     while(t--)
@@ -29,9 +26,10 @@ int main() {
         for(int i=0;i<n;i++)
        {
             int s=a[i]+k;
-         if(binary(a,s,0,n-1)) 
+         if(binarySearch(a,s,0,n-1)) 
          { 
-             f=1;break;
+             f=1;
+             break;
          }
         }
         if(f==0) 
