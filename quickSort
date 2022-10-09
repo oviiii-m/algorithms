@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+
+
+int Partition(int input[], int si, int ei)
+{
+    int count=0;
+    for(int i=si+1; i<=ei; i++){
+        if(input[i] < input[si]){    
+            count++;
+        }
+    }
+    int pi = count+si;
+    int temp=input[pi];
+    input[pi]=input[si];
+    input[si]=temp;
+    
+    int i=si, j=ei;
+    while(i < pi && j > pi){
+        if(input[i] < input[pi]){
+            i++;
+        }
+        else if(input[j] >= input[pi]){
+            j--;
+        }
+        else{                       //if(input[i] > input[pi] && input[j] < input[pi])
+            int temp = input[i];
+            input[i] = input[j];
+            input[j] = temp;
+            i++;
+            j--;
+        }
+    }
+    return pi;
+}
+
+void helper(int input[], int si, int ei)
+{
+    if(si >= ei){
+        return;
+    }
+    
+    int pi = Partition(input, si, ei);   
+    
+    helper(input, si, pi-1);
+    helper(input, pi+1, ei);    
+}	
+void quickSort(int input[], int size)
+{
+    helper(input, 0, size-1);
+}
+
+int main(){
+    int n;
+    cin >> n;
+  
+    int *input = new int[n];
+    
+    for(int i = 0; i < n; i++) {
+        cin >> input[i];
+    }
+    
+    quickSort(input, n);
+    for(int i = 0; i < n; i++) {
+        cout << input[i] << " ";
+    }
+    
+    delete [] input;
+
+}
+
+
