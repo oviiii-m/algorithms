@@ -1,8 +1,3 @@
-
-
-Coding-Basics-HacktoberFest2022
-This repo has been excluded from HacktoberFest
-
 What is HacktoberFest 2022?
 hactoberfest
 
