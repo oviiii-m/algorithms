@@ -4,11 +4,8 @@ using namespace std;
 int main(){
   string str;
   cin>>str;
-  int s=0,e=s.size()-1;
-  while(s<e){
-    swap(str[s],str[e]);
-    s++;
-    e--;
-  }
-  cout<<"reversed string"<<" "<<str<<endl;
+  int n=str.size();
+  for(int i=n-1;i>=0;i--){
+    cout<<str[i];}
+  return 0;
 }
