@@ -2,12 +2,11 @@
 using namespace std;
 
 int sum(int input[], int n) 
-{
-    if(n == 1){
-        return input[0];
-    }
-    
-    int ans = input[n-1] + sum(input, n-1);    
+{int sum=0;
+   for(int i=0;i<n;i++){
+       sum+=input[i];
+   }
+    return sum;
 }
 
 
